@@ -17,7 +17,7 @@ int main()
 	Bandit slot(3); 
 	//инициализаци€ очереди
 	for (int i = 1; i < 4; i++) { slot.Add(i);}	
-	cout << "VARIANTS: "; slot.Show();
+	cout << "VARIANTS OF EACH SLOT: "; slot.Show();
 	char quit;
 	do {
 
@@ -27,7 +27,7 @@ int main()
 		cout << "\nYOUR NUMBERS: \n" << A << " : " << B << " : " << C << "\n\n";
 		if (A == B && A == C && B == C)
 		{
-			cout << "You are the winner!" << "\n\n";
+			cout << "YOU ARE THE WINNER!" << "\n\n";
 		}
 		else cout << "Try once again!" << "\n\n";
 		cout << "ѕопробовать еще раз, y/n?" << endl;
