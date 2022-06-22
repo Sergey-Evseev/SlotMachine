@@ -29,8 +29,7 @@ Bandit::~Bandit()
 
 int Bandit::Kick(Bandit & slot)
 {
-	int round=0;
-	//slot.Extract();
+	int round=0;	
 	while (round < rand() % 100)
 	{
 		slot.Extract();
