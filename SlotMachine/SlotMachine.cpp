@@ -14,16 +14,16 @@ int main()
 	srand(time(NULL));
 
 	//создание очереди
-	Bandit slot(6);
+	Bandit slot(6); 
+	//инициализация очереди
 	for (int i = 1; i < 8; i++)
 	{
 		slot.Add(i);
 	}
 	slot.Show();
-	slot.Extract();
+	cout << slot.Extract();
 
-	Bandit machine;
-	machine.Kick(slot);
+	cout << slot.Kick(slot) << endl;
 
 	return 0;
 }

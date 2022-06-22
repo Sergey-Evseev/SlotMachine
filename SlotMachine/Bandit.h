@@ -15,13 +15,12 @@ class Bandit
 public:
 	
 	//метод вызова случайного значения перебора очереди//
-	int Kick(Bandit &slot) {
-		return slot.Extract();
-	};
-
+	int Kick(Bandit &slot);
 
 	//Конструктор
 	Bandit(int m);
+
+	
 
 	//Деструктор
 	~Bandit();

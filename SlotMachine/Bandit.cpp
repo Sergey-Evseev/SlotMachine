@@ -24,12 +24,18 @@ Bandit::Bandit(int m)
 
 Bandit::~Bandit()
 {
-	cout << "\n-----------------------------------\n";
-	//демонстраци€ очереди
-	for (int i = 0; i < QueueLength; i++) {
-		cout << Wait[i] << " ";
+	delete[] Wait;
+}
+
+int Bandit::Kick(Bandit & slot)
+{
+	int round=0;
+	slot.Extract();
+	while (round < rand() % 100)
+	{
+		slot.Extract();
 	}
-	cout << "\n-----------------------------------\n";
+	return Wait[0];
 }
 
 void Bandit::Add(int c)
@@ -48,10 +54,9 @@ int Bandit::Extract()
 		//сдвинуть все элементы
 		for (int i = 1; i < QueueLength; i++)
 			Wait[i - 1] = Wait[i];
-		//забрасываем первый "вытолкнутый элемент
-		//в конец"
+		//забрасываем первый "вытолкнутый элемент в конец
 		Wait[QueueLength - 1] = temp; 
-		return 1;
+		return Wait[0];
 	}
 	else return 0;
 }
@@ -79,4 +84,5 @@ int Bandit::GetCount()
 	// оличество присутствующих в стеке элементов
 	return QueueLength;
 }
+
 
