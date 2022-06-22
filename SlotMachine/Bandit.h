@@ -19,9 +19,7 @@ public:
 
 	//Конструктор
 	Bandit(int m);
-
 	
-
 	//Деструктор
 	~Bandit();
 

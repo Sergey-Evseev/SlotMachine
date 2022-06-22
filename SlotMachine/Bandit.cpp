@@ -19,7 +19,7 @@ Bandit::Bandit(int m)
 	//создаем очередь
 	Wait = new int[MaxQueueLength];
 	//Изначально очередь пуста
-	QueueLength = 0;
+	QueueLength = 0;	
 }
 
 Bandit::~Bandit()
@@ -30,7 +30,7 @@ Bandit::~Bandit()
 int Bandit::Kick(Bandit & slot)
 {
 	int round=0;
-	slot.Extract();
+	//slot.Extract();
 	while (round < rand() % 100)
 	{
 		slot.Extract();
@@ -84,5 +84,3 @@ int Bandit::GetCount()
 	//Количество присутствующих в стеке элементов
 	return QueueLength;
 }
-
-
