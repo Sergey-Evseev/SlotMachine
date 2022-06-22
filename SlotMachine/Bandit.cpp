@@ -26,7 +26,7 @@ Bandit::~Bandit()
 {
 	delete[] Wait;
 }
-
+// метод перебора очереди//
 int Bandit::Kick(Bandit & slot)
 {
 	int round=0;	
