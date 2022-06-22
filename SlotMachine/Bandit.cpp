@@ -50,7 +50,7 @@ int Bandit::Extract()
 			Wait[i - 1] = Wait[i];
 		//забрасываем первый "вытолкнутый элемент
 		//в конец"
-		Wait[QueueLength - 1] = temp;
+		Wait[QueueLength - 1] = temp; 
 		return 1;
 	}
 	else return 0;
